@@ -22,6 +22,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <algorithm>
 using namespace std;
 
@@ -33,7 +34,26 @@ public:
 		ListNode(int x) : val(x), next(NULL) {}
 	};
 public:
+
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+		ListNode *dummy = new ListNode(-1);
+		ListNode *cur = dummy;
+		int carry = 0; //进位标志
+		while (l1 || l2) {	//判断两个链表是否为空，有一个不为空，即继续执行
+			int val1 = l1 ? l1->val : 0;	//取当前链表的值
+			int val2 = l2 ? l2->val : 0;	//取当前链表的值
+			int sum = val1 + val2 + carry;	//值相加，并进位
+			carry = sum / 10;				//取进位符号，如果
+			cur->next = new ListNode(sum % 10);	//当前相加的值推入链表的下一节点
+			cur = cur->next;
+			if (l1) l1 = l1->next;
+			if (l2) l2 = l2->next;
+		}
+
+		if (carry) cur->next = new ListNode(1);
+		return dummy->next;
+	}
+	/*ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 		stack<int> s1, s2;
 		while (l1) {
 			s1.push(l1->val);
@@ -56,8 +76,35 @@ public:
 			res = head;
 			sum /= 10;
 		}
-		return res->val == 0 ? res->next : res;
+
+		ListNode *del0res = new ListNode(-1);
+		if (res->val == 0) {
+			del0res =res->next;
+		}
+		else {
+			del0res = res;
+		}
+		ListNode *rres = listReverse(del0res);
+		return rres;
 		
+	}*/
+
+	ListNode *listReverse(ListNode *pHead) {
+		if (pHead == NULL) {
+			return NULL;
+		}
+		ListNode *pCurrent, *pPre, *pNext;
+		pPre = pHead;
+		pCurrent = pPre->next;
+		while (pCurrent) {
+			pNext = pCurrent->next;
+			pCurrent->next = pPre;
+			pPre = pCurrent;
+			pCurrent = pNext;
+		}
+		pHead->next = NULL;
+		pHead = pPre;
+		return pHead;
 	}
 };
 

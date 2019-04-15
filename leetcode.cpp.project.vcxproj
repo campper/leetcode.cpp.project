@@ -84,6 +84,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>-D_SCL_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,7 +118,7 @@
   <ItemGroup>
     <ClCompile Include="algorithms\Person.cpp" />
     <ClCompile Include="algorithms\trailing-zeros.cpp" />
-    <ClCompile Include="algorithms\twoSum.cpp" />
+    <ClCompile Include="algorithms\AddTwoNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms\Person.h" />

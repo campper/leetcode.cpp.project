@@ -24,14 +24,14 @@ void Person::setName(char* name) {
 	name_ = name;
 }
 
-int main(void){
-	char tmp[] = "campper";
-	char* name = tmp;
-	Person *p = new Person;
-    p->setName(name);
-	std::cout << p->getName() << std::endl;
-    //std::cout<<p.getName()<<std::endl;
-	delete p;
-	system("pause");
-    return 0;
-}
+//int main(void){
+//	char tmp[] = "campper";
+//	char* name = tmp;
+//	Person *p = new Person;
+//    p->setName(name);
+//	std::cout << p->getName() << std::endl;
+//    //std::cout<<p.getName()<<std::endl;
+//	delete p;
+//	system("pause");
+//    return 0;
+//}

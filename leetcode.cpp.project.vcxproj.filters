@@ -24,7 +24,7 @@
     <ClCompile Include="algorithms\trailing-zeros.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\twoSum.cpp">
+    <ClCompile Include="algorithms\AddTwoNumber.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
   </ItemGroup>
