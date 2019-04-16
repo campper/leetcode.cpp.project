@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="algorithms\lengthOfLongestSubstring.cpp" />
     <ClCompile Include="algorithms\Person.cpp" />
     <ClCompile Include="algorithms\trailing-zeros.cpp" />
     <ClCompile Include="algorithms\AddTwoNumber.cpp" />
