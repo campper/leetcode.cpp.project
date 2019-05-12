@@ -30,6 +30,9 @@
     <ClCompile Include="algorithms\lengthOfLongestSubstring.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="algorithms\findMedianSortedArrays.cpp">
+      <Filter>algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms\Person.h">

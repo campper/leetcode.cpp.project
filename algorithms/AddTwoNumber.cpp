@@ -164,17 +164,17 @@ string listNodeToString(Solution::ListNode* node) {
 	return "[" + result.substr(0, result.length() - 2) + "]";
 }
 
-int main() {
-	string line;
-	while (getline(cin, line)) {
-		Solution::ListNode* l1 = stringToListNode(line);
-		getline(cin, line);
-		Solution::ListNode* l2 = stringToListNode(line);
-
-		Solution::ListNode* ret = Solution().addTwoNumbers(l1, l2);
-
-		string out = listNodeToString(ret);
-		cout << out << endl;
-	}
-	return 0;
-}
+//int main() {
+//	string line;
+//	while (getline(cin, line)) {
+//		Solution::ListNode* l1 = stringToListNode(line);
+//		getline(cin, line);
+//		Solution::ListNode* l2 = stringToListNode(line);
+//
+//		Solution::ListNode* ret = Solution().addTwoNumbers(l1, l2);
+//
+//		string out = listNodeToString(ret);
+//		cout << out << endl;
+//	}
+//	return 0;
+//}
