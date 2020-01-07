@@ -16,6 +16,12 @@
     <Filter Include="algorithms">
       <UniqueIdentifier>{02dfa7b7-eaad-496e-b82d-ba16cb43fc81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="class_test">
+      <UniqueIdentifier>{a6dc6270-faff-4f10-ac2e-cb7a239d0c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="games">
+      <UniqueIdentifier>{843e0951-2a00-48f7-a21b-1fd5684dd854}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithms\Person.cpp">
@@ -27,16 +33,34 @@
     <ClCompile Include="algorithms\AddTwoNumber.cpp">
       <Filter>algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms\lengthOfLongestSubstring.cpp">
-      <Filter>algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="algorithms\findMedianSortedArrays.cpp">
       <Filter>algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="helloworld.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="class_test\customer.cpp">
+      <Filter>class_test</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceType.cpp">
+      <Filter>class_test</Filter>
+    </ClCompile>
+    <ClCompile Include="game.c">
+      <Filter>games</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms\Person.h">
       <Filter>algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="class_test\customer.h">
+      <Filter>class_test</Filter>
+    </ClInclude>
+    <ClInclude Include="ScopedResource.h">
+      <Filter>class_test</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

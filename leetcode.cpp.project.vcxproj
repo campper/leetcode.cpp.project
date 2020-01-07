@@ -117,13 +117,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="algorithms\findMedianSortedArrays.cpp" />
-    <ClCompile Include="algorithms\lengthOfLongestSubstring.cpp" />
     <ClCompile Include="algorithms\Person.cpp" />
     <ClCompile Include="algorithms\trailing-zeros.cpp" />
     <ClCompile Include="algorithms\AddTwoNumber.cpp" />
+    <ClCompile Include="class_test\customer.cpp" />
+    <ClCompile Include="game.c" />
+    <ClCompile Include="helloworld.c" />
+    <ClCompile Include="ResourceType.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms\Person.h" />
+    <ClInclude Include="class_test\customer.h" />
+    <ClInclude Include="ScopedResource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

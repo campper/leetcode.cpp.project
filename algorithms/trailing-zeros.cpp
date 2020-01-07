@@ -9,3 +9,4 @@ public:
         // write your code here, try to do it without arithmetic operators.
     }
 };
+

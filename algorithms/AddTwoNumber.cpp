@@ -108,12 +108,14 @@ public:
 	}
 };
 
+/* É¾³ı×ó±ß¿Õ¸ñ */
 void trimLeftTrailingSpaces(string &input) {
 	input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
 		return !isspace(ch);
 	}));
 }
 
+/* É¾³ıÓÒ±ß¿Õ¸ñ */
 void trimRightTrailingSpaces(string &input) {
 	input.erase(find_if(input.rbegin(), input.rend(), [](int ch) {
 		return !isspace(ch);

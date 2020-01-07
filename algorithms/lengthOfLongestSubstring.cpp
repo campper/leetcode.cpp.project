@@ -7,25 +7,28 @@
 #include <assert.h>
 #include <unordered_map>
 using namespace std;
+using namespace algorithms;
 
-class Solution {
-public:
-	int lengthOfLongestSubstring(string s) {
-		int res = 0;
-		int n = s.size();
-		int left = -1;
-		unordered_map<int, int> m;
-		for (int i = 0; i < n; i++) {
-			if (m.count(s[i]) && m[s[i]] > left) {
-				left = m[s[i]];
+namespace algorithms
+{
+	class Solution {
+	public:
+		int lengthOfLongestSubstring(string s) {
+			int res = 0;
+			int n = s.size();
+			int left = -1;
+			unordered_map<int, int> m;
+			for (int i = 0; i < n; i++) {
+				if (m.count(s[i]) && m[s[i]] > left) {
+					left = m[s[i]];
+				}
+				m[s[i]] = i;
+				res = max(res, i - left);
 			}
-			m[s[i]] = i;
-			res = max(res, i - left);
+			return res;
 		}
-		return res;
-	}
-};
-
+	};
+}
 
 string stringToString(string input) {
 	assert(input.length() >= 2);
@@ -54,18 +57,18 @@ string stringToString(string input) {
 	return result;
 }
 
-int main() {
-	string line;
-	while (getline(cin, line)) {
-		for (int i = 0; i < line.size(); i++) {
-			cout << i << " " << line[i] << endl;
-		}
-
-		string s = stringToString(line);
-
-		int ret = Solution().lengthOfLongestSubstring(s);
-
-		string out = to_string(ret);
-		cout << out << endl;
-	}
-}
+//int main() {
+//	string line;
+//	while (getline(cin, line)) {
+//		for (int i = 0; i < line.size(); i++) {
+//			cout << i << " " << line[i] << endl;
+//		}
+//
+//		string s = stringToString(line);
+//
+//		int ret = Solution().lengthOfLongestSubstring(s);
+//
+//		string out = to_string(ret);
+//		cout << out << endl;
+//	}
+//}
