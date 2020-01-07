@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-
+//Ä£°åÑ§Ï°
 template <typename T>
 inline T const& Max(T const& a, T const& b)
 {
