@@ -69,3 +69,8 @@ int power(int base, int n) {
 	}
 	return p;
 }
+
+
+int abs(int num) {
+	return 0;
+}
