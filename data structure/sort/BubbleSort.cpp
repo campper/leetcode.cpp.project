@@ -36,6 +36,8 @@ int main()
         index++;
         std::cin>>node;
     }
+    std::cout<<index<<std::endl;
+    std::cout<<&list<<std::endl;
     //冒泡排序
     bubbleSort(list,index);
     
