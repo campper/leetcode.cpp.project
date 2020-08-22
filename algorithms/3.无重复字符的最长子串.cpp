@@ -5,34 +5,25 @@
  */
 
 // @lc code=start
-#include <string>
-#include <vector>
-#include <algorithm>
+#include<string>
+#include<algorithm>
+#include<vector>
 using namespace std;
 
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        vector<int> m(128, 0);
-        int i = 0;
-        int len= s.size();
-        int ans;
-        for(int j=0;j<len;j++)
-        {
-            i = max(i, m[s[j]]);
-            m[s[j]] = j+1;
-            ans = max(ans, j - i + 1);
+        vector<int> res(256,0);
+        int len = s.size();
+        int left = 0;
+        int ans = 0;
+        for(int i =0;i<len;i++){
+            left = max(left,res[s[i]]);
+            res[s[i]] = i + 1;
+            ans = max(ans,i-left+1);
         }
         return ans;
     }
 };
-
-int main(void)
-{
-    Solution s;
-    std::string test = "abcabcbb";
-    int ans = s.lengthOfLongestSubstring(test);
-    return 0;
-}
 // @lc code=end
 
