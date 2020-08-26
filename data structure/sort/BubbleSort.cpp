@@ -1,8 +1,11 @@
 /* ===== 冒泡排序算法 ===== */
+/*
+ * 算法思想:两次遍历数组，第一次获取每个元素，然后将获取的当前元素与下一个元素比较大小
+ */
 #include <iostream>
 using namespace std;
 
-void bubbleSort(int *list,int index)
+void BubbleSort(int *list,int index)
 {
     int temp;
     for(int i=0;i<=index;i++)
@@ -25,6 +28,7 @@ int main()
     int list[20];
     int i,index;
     int node;
+    int *p = &list[1];
 
     std::cout<<"\n Please input the values you want to sort(Exit for 0):\n"<<std::endl;
     index = 0;
@@ -36,10 +40,9 @@ int main()
         index++;
         std::cin>>node;
     }
-    std::cout<<index<<std::endl;
-    std::cout<<&list<<std::endl;
+    std::cout<<*(p+1)<<std::endl;
     //冒泡排序
-    bubbleSort(list,index);
+    BubbleSort(list,index);
     
     //打印结果
     std::cout<<"\n　Final sorting result:\n";
