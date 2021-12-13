@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//模板学习
+//模锟斤拷学习
 template <typename T>
 inline T const& Max(T const& a, T const& b)
 {
@@ -17,14 +17,14 @@ struct ListNode {
 };
 
 
-//int main() {
-//	ListNode *l1 = new ListNode(-1);
-//	if (l1) {
-//		cout << true << endl;
-//	}
-//	else {
-//		cout << false << endl;
-//	}
-//	return 0;
-//}
+int main() {
+	ListNode *l1 = new ListNode(-1);
+	if (l1) {
+		cout << true << endl;
+	}
+	else {
+		cout << false << endl;
+	}
+	return 0;
+}
 
