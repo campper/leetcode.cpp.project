@@ -1,11 +1,11 @@
-/*
- * @lc app=leetcode.cn id=4 lang=cpp
- *
- * [4] 寻找两个正序数组的中位数
- */
+#ifndef __FIND_MEDIAN_H__
+#define __FIND_MEDIAN_H__
 
-// @lc code=start
-class Solution {
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Median {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int m = nums1.size();
@@ -18,5 +18,5 @@ public:
         return  (m+n)& 1? r:(l+r) / 2.0;
     }
 };
-// @lc code=end
 
+#endif // __FIND_MEDIAN_H__
