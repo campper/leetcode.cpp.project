@@ -7,6 +7,6 @@ public:
      */
     long long trailingZeros(long long n) {
         // write your code here, try to do it without arithmetic operators.
-    }
+    };
 };
 

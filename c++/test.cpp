@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//ģ��ѧϰ
+//test
 template <typename T>
 inline T const& Max(T const& a, T const& b)
 {
@@ -15,16 +15,4 @@ struct ListNode {
 
 	}
 };
-
-
-int main() {
-	ListNode *l1 = new ListNode(-1);
-	if (l1) {
-		cout << true << endl;
-	}
-	else {
-		cout << false << endl;
-	}
-	return 0;
-}
 
