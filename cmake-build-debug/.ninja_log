@@ -1,0 +1,9 @@
+# ninja log v5
+23	213	6759600696323772	CMakeFiles/leetcode_cpp_project.dir/c++/ResourceType.cpp.obj	a7a2db057afb3f54
+2	314	6759602599045877	CMakeFiles/leetcode_cpp_project.dir/c++/findMedian.cpp.obj	17c1fbc120577031
+34	223	6759600696364206	CMakeFiles/leetcode_cpp_project.dir/c++/trailing-zeros.cpp.obj	e3788f733b2389b4
+0	557	6759600699761413	CMakeFiles/leetcode_cpp_project.dir/c++/Helloword.cpp.obj	dcf52ec01fe26313
+14	571	6759600699843953	CMakeFiles/leetcode_cpp_project.dir/c++/Person.cpp.obj	f24035d116f4406e
+3	282	6759601405946712	CMakeFiles/leetcode_cpp_project.dir/c++/test.cpp.obj	aed6e54aa6b35ce8
+315	410	6759602599973527	leetcode_cpp_project.exe	947212d259a7256e
+2	421	6784352674984397	CMakeFiles/leetcode_cpp_project.dir/c++/Helloword.cpp.obj	dcf52ec01fe26313

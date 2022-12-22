@@ -39,7 +39,7 @@ class MaxHeap{
     public:
     MaxHeap(int capacity){
         data = new Item[capacity+1];
-        count = 0;
+        _count = 0;
         this->capacity = capacity;
     }
     
@@ -61,13 +61,13 @@ class MaxHeap{
         data[_count+1] = item;
         _count ++;
 
-        shiftUp(count);
+        shiftUp(_count);
     }
 
     Item extractMax(){
         assert( _count > 0 );
         Item ret = data[1];
-        swap(data[1], data[_count] );
+        swap( data[1], data[_count] );
 
         _count --;
         shiftDown(1);
@@ -110,7 +110,7 @@ class MaxHeap{
         for(int level = 0; level<max_level;level++){
             string line1 = string(max_level_number*3-1,' ');
 
-            int cur_level_number = min(count-int(pow(2,level))+1,int(pow(2,level)));
+            int cur_level_number = min(_count-int(pow(2,level))+1,int(pow(2,level)));
             bool isLeft = true;
             for(int index_cur_level = 0;index_cur_level < cur_level_number; index++,index_cur_level++){
                 putNumberInLine(data[index],line1,index_cur_level,cur_tree_max_level_number*3-1,isLeft);
@@ -159,6 +159,4 @@ class MaxHeap{
         line[offset_left + 1] = '/';
         line[offset_right + 0] = '\\';
     }
-
-
 };
