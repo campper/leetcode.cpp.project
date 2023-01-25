@@ -27,9 +27,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "d:/projects/leetcode.cpp.project",
-      "program": "d:/projects/leetcode.cpp.project/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "i:/projects/leetcode.cpp.project",
+      "program": "i:/projects/leetcode.cpp.project/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
