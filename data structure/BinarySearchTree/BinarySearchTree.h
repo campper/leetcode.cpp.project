@@ -1,0 +1,16 @@
+//
+// Created by alxor on 10/12/2023.
+//
+
+#ifndef LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
+#define LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
+
+
+
+class BinarySearchTree {
+
+};
+
+
+
+#endif //LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
