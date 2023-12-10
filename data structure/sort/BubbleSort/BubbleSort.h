@@ -2,7 +2,14 @@
 // Created by alxor on 7/20/2023.
 //
 
-#ifndef LEETCODE_CPP_PROJECT_BUBBLESORT_H
-#define LEETCODE_CPP_PROJECT_BUBBLESORT_H
+#ifndef __BUBBLESORT_H__
+#define __BUBBLESORT_H__
+#include <iostream>
+using namespace std;
 
-#endif //LEETCODE_CPP_PROJECT_BUBBLESORT_H
+template<typename T>
+void bubble_sort(T arr[]){
+    
+}
+
+#endif //__BUBBLESORT_H__
