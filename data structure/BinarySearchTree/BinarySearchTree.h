@@ -296,18 +296,18 @@ private:
         }
     }
 
-    Node* successor(Node* node){
-        if(node->_right != NULL){
-            return minimum(node->_right);
-        }
+    // Node* successor(Node* node){
+    //     if(node->_right != NULL){
+    //         return minimum(node->_right);
+    //     }
 
-        Node* parent = node->_parent;
-        while(parent != NULL && parent->_right == node){
-            node = parent;
-            parent = node->_parent;
-        }
-        return parent;
-    }
+    //     Node* parent = node->_parent;
+    //     while(parent != NULL && parent->_right == node){
+    //         node = parent;
+    //         parent = node->_parent;
+    //     }
+    //     return parent;
+    // }
 
 };
 
