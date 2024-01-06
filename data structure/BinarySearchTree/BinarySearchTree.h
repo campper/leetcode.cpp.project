@@ -5,6 +5,9 @@
 #ifndef LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
 #define LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
 
+#include <iostream>
+#include <queue>
+
 template <typename Key,typename Value>
 class BST {
 private:
@@ -32,6 +35,7 @@ public:
 
     ~BST(){
         // TODO: ~ BST()
+        destroy(_root);
     }
 
     int size(){
@@ -50,11 +54,43 @@ public:
         return contain(this->_root,key);
     }
 
+    
+
     //  Node* 
     //  Value
     //  指针可以为空元素
     Value* search(Key key){
         return search(this->_root,key);
+    }
+
+    //  前序遍历
+    void preOrder(){
+        preOrder(this->_root);
+    }
+
+    //  中序遍历
+    void inOrder(){
+        inOrder(this->_root);
+    }
+    //  后序遍历
+    void postOrder(){
+        postOrder(this->_root);
+    }
+
+    //  层序遍历
+    void levelOrder(){
+        queue<Node*> q;
+        q.push(this->_root);
+        while(!q.empty()){
+            Node* node = q.front();
+            q.pop();
+            cout<<node->_key<<" ";
+            if(node->_left)
+                q.push(node->_left);
+            if(node->_right)
+                q.push(node->_right);
+        }
+        cout<<endl;
     }
 private:
     // 向以node为根的二叉搜索树中,插入节点(key，value)
@@ -103,6 +139,45 @@ private:
         } else {
             return search(node->_right,key);
         }
+    }
+
+    // 以node为根对二分搜索树进行前序遍历
+    void preOrder(Node* node){
+        if(node != NULL){
+            cout << node->_key << endl;
+            preOrder(node->_left);
+            preOrder(node->_right);
+        }
+    }
+
+    // 以node为根对二分搜索树进行中序遍历
+    void inOrder(Node* node){
+        if(node != NULL){
+            inOrder(node->_left);
+            cout << node->_key << endl;
+            inOrder(node->_right);
+        }
+    }
+
+    // 以node为根对二分搜索树进行后序遍历
+    void postOrder(Node* node){
+        if(node != NULL){
+            postOrder(node->_left);
+            postOrder(node->_right);
+            cout << node->_key << endl;
+        }
+
+    }
+
+    void destroy(Node* node){
+        if(node != NULL){
+            destroy(node->_left);
+            destroy(node->_right);
+
+            delete node;
+            this->_count--;
+        }
+
     }
 
 };
