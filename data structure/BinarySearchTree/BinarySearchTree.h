@@ -24,6 +24,13 @@ private:
             this->_right = NULL;
         }
 
+        Node(Node *node){
+            this->_key = node->_key;
+            this->_value = node->_value;
+            this->_left = node->_left;
+            this->_right = node->_right;
+        }
+
     };
     Node *_root;
     int _count;
@@ -91,6 +98,40 @@ public:
                 q.push(node->_right);
         }
         cout<<endl;
+    }
+
+    //  寻找最小键值
+    Key minimum(){
+        assert( _count != 0);
+        Node* minNode = minimum(_root);
+        return minNode->_key;
+    }
+
+    //  寻找最大键值
+    Key maximum(){
+        assert( _count != 0);
+        Node* maxNode = maximum(_root);
+        return maxNode->_key;
+    }
+
+    //  删除最小键值
+    void removeMin(){
+        if(_root){
+            _root = removeMin(_root);
+        }
+        
+    }
+
+    //  删除最大键值
+    void removeMax(){
+        if(_root){
+            _root = removeMax(_root);
+        }
+    }
+
+    //  删除指定的key
+    void remove(Key key){
+        _root = remove(root,key);
     }
 private:
     // 向以node为根的二叉搜索树中,插入节点(key，value)
@@ -178,6 +219,94 @@ private:
             this->_count--;
         }
 
+    }
+
+    Node* minimum(Node* node){
+        if(node->_left == NULL){
+            return node;
+        }
+        return minimum(node->_left);
+    }
+
+    //  删除掉以node为根的二分搜索树的最小节点
+    //  返回删除节点后新的二分搜索树的根
+    Node* removeMin(Node* node){
+        if(node->_left == NULL){
+            Node* rightNode = node->_right;
+            // node->_right = NULL;
+            delete node;
+            this->_count--;
+            return rightNode;
+        }
+        node->_left = removeMin(node->_left);
+        return node;
+    }
+
+    //  删除掉以node为根的二分搜索树的最大节点
+    Node* removeMax(Node* node){
+        if(node->_right == NULL){
+            Node* leftNode = node->_left;
+            // node->_left = NULL;
+            delete node;
+            this->_count--;
+            return leftNode;
+        }
+        node->_right = removeMax(node->_right);
+        return node;
+    }
+
+    Node* maximum(Node* node){
+        if(node->_right == NULL){
+            return node;
+        }
+        return maximum(node->_right);
+    }
+
+    Node* remove(Node* node, Key key){
+        if(node == NULL)
+            return NULL;
+
+        if(key < node->_key){
+            node->_left = remove(node->_left, key);
+            return node;
+        } else if(key > node->_key){
+            node->_right =  remove(node->_right, key);
+        }   else {
+            // key == node->key
+            if(node->_left == NULL){
+                Node * rightNode = node->_right;
+                // node->_right = NULL;
+                delete node;
+                _count--;
+            }
+
+            if(node->_right == NULL){
+                Node * leftNode = node->_left;
+                // node->_left = NULL;
+                delete node;
+                _count--;
+                return leftNode;
+            }
+
+            // Node *delNode = node;
+            Node *successor = minimum(node->_right);
+            successor->_right = removeMin(node->_right);
+            successor->_left = node->_left;
+            return successor;
+        }
+    }
+
+    Node* successor(Node* node){
+        if(node->_right != NULL){
+            return minimum(node->_right);
+        }
+
+        Node* parent = node->_parent;
+        while(parent != NULL && parent->_right == node){
+            node = parent;
+            parent = node->_parent;
+        }
+        return parent;
     }
 
 };
