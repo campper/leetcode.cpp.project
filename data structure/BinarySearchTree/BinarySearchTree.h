@@ -2,8 +2,8 @@
 // Created by alxor on 10/12/2023.
 //
 
-#ifndef LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
-#define LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
+#ifndef __BINARYSEARCHTREE_H__
+#define __BINARYSEARCHTREE_H__
 
 #include <iostream>
 #include <queue>
@@ -289,6 +289,7 @@ private:
             }
 
             // Node *delNode = node;
+            //  不太理解
             Node *successor = minimum(node->_right);
             successor->_right = removeMin(node->_right);
             successor->_left = node->_left;
@@ -312,4 +313,4 @@ private:
 };
 
 
-#endif //LEETCODE_CPP_PROJECT_BINARYSEARCHTREE_H
+#endif // __BINARYSEARCHTREE_H__
