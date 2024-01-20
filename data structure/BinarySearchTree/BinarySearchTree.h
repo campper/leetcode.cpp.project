@@ -149,7 +149,6 @@ private:
         } else {
             node->_right = insert(node->_right,key,value);
         }
-
         return node;
 
     }
