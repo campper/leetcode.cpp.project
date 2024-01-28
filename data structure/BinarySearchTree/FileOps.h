@@ -54,7 +54,9 @@ namespace FileOps {
                 i = start + 1;
             }
             else
+            {
                 i ++;
+            }
 
         return true;
     }
