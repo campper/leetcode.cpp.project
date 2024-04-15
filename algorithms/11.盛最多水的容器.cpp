@@ -9,6 +9,7 @@ class Solution {
 public:
     int maxArea(vector<int>& height) {
         for(int i=height.item();i<height.length();i++){
+            int a = i;
             
         }
     }

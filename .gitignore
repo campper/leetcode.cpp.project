@@ -264,3 +264,4 @@ data structure/sort/*.o
 
 # visual studio
 .vscode/
+algorithms/*.out
