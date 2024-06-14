@@ -1,3 +1,6 @@
+#include <iostream>
+#include <unordered_map>
+using namespace std;
 /*
  * @lc app=leetcode.cn id=13 lang=cpp
  *
@@ -21,12 +24,12 @@ public:
         int ans = 0;
         int n = s.length();
         for(int i = 0;i<n;++i){
-            int value = symbolValues[s[i]];
-            if (i < n - 1 && value < symbolValues[s[i + 1]]) {
-                ans -= value;
-            } else {
-                ans += value;
-            }
+            int value = symbolValues[s[i]];  // 获取当前字符代表的数值
+            // if (i < n - 1 && value < symbolValues[s[i + 1]]) {
+            //     ans -= value;
+            // } else {
+            //     ans += value;
+            // }
         }
         return ans;
     }

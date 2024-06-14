@@ -255,21 +255,39 @@ private:
     }
 
     Node* maximum(Node* node){
+        // 节点的最小值
         if(node->_right == NULL){
             return node;
         }
         return maximum(node->_right);
     }
 
-    Node* remove(Node* node, Key key){
+
+    Node* remove(Node* node,Key key)
+    {
+        //找前序节点的最大值
+        if(node == NULL){
+            return NULL;
+        }
+        
+        if(key < node->_key){
+            
+        }
+    }
+
+    Node* remove(Node* node, Key key)
+    {
+        //找后继节点的最小值
         if(node == NULL)
             return NULL;
 
-        if(key < node->_key){
+        if(key < node->_key)
+        {
             node->_left = remove(node->_left, key);
             return node;
         } else if(key > node->_key){
             node->_right =  remove(node->_right, key);
+            return node;
         }   else {
             // key == node->key
             if(node->_left == NULL){
@@ -277,6 +295,7 @@ private:
                 // node->_right = NULL;
                 delete node;
                 _count--;
+                return rightNode;
             }
 
             if(node->_right == NULL){
@@ -288,10 +307,14 @@ private:
             }
 
             // Node *delNode = node;
-            //  不太理解
-            Node *successor = minimum(node->_right);
+            //  左右孩子都不为空,最难的操作
+            Node *successor = new Node(minimum(node->_right));
+            _count++;
             successor->_right = removeMin(node->_right);
             successor->_left = node->_left;
+
+            _count --;
+            delete node;
             return successor;
         }
     }

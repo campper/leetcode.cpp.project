@@ -24,9 +24,11 @@
 ## 删除左右都有孩子的节点
 
 * Hubbard Deletion
-
+左右都有节点的删除法 Hubbard Deletion
 思想原理是找当前要删除节点的右子树的最小值
 
+因为右子树中的节点一定大于左子树的值
+要找D的后继节点 S--> Seccessor
 
 ```c++
 s = min(d->right)
@@ -37,3 +39,14 @@ s->right = delMin(d->right)
 s->left = d->left
 ```
 删除d,s是新的子树的根
+
+## 二分搜索树的顺序性
+```
+floor ceil
+```
+floor:地板
+ceil:天花板
+
+```
+rank select
+```
