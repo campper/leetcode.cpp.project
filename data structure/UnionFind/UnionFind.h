@@ -1,4 +1,6 @@
-#ifndef UNION
+#ifndef _UNION_FIND_H_
+#define _UNION_FIND_H_
+
 class UnionFind {
     private:
         int* id;
@@ -39,3 +41,4 @@ class UnionFind {
             }
         }
 }
+#endif

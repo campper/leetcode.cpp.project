@@ -3,7 +3,8 @@
 
 using namespace std;
 
-class UnionFind {
+class UnionFind 
+{
     private:
         int* id;
         int count;
@@ -23,23 +24,25 @@ class UnionFind {
         int find(int p){
             assert(p>=0 && p< count);
             return id[p];
-        }
+        };
 
         bool isConnected(int p, int q){
             return find(p) == find(q);
         }
 
-        void unionElements(int p, int q){
-            int pID= find(p);
+        void unionElements(int p, int q)
+        {
+            int pID = find(p);
             int qID = find(q);
             if(pID == qID)
                 return;
 
-            for(int i=0; i<count; i++){
+            for(int i=0; i<count; i++)
+            {
                 if(id[i] == pID)
                 {
                     id[i] = qID;
                 }
             }
-        }
-}
+        };
+};
