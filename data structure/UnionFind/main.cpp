@@ -1,48 +1,14 @@
 #include <iostream>
-#include <assert.h>
+#include "UnionFindTestHelper.h"
 
 using namespace std;
 
-class UnionFind 
-{
-    private:
-        int* id;
-        int count;
-    public:
-        UnionFind(int n){
-            count = n;
-            id = new int[n];
-            for(int i = 0; i < n; i++)
-                id[i] = i;
+int main(){
+    int n = 10000;
+    
+    // 虽然isConnected只需要O(1)的时间, 但由于union操作需要O(n)的时间
+    // 总体测试过程的算法复杂度是O(n^2)的
+    UnionFindTestHelper::testUF1(n);
 
-        }
-
-        ~UnionFind(){
-            delete[] id;
-        }
-        
-        int find(int p){
-            assert(p>=0 && p< count);
-            return id[p];
-        };
-
-        bool isConnected(int p, int q){
-            return find(p) == find(q);
-        }
-
-        void unionElements(int p, int q)
-        {
-            int pID = find(p);
-            int qID = find(q);
-            if(pID == qID)
-                return;
-
-            for(int i=0; i<count; i++)
-            {
-                if(id[i] == pID)
-                {
-                    id[i] = qID;
-                }
-            }
-        };
-};
+    return 0;
+}

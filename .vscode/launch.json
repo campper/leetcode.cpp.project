@@ -26,8 +26,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": ".",
-      "program": "build/Debug/outDebug"
+      "cwd": "/Users/icowin/Projects/leetcode.cpp.project/data structure/UnionFind",
+      "program": "/Users/icowin/Projects/leetcode.cpp.project/data structure/UnionFind/build/Debug/outDebug"
     }
   ]
 }

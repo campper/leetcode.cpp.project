@@ -40,11 +40,11 @@ CMAKE_CACHE_MINOR_VERSION:INTERNAL=20
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=21032501
 //Path to CMake executable.
-CMAKE_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe
+// CMAKE_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe
 //Path to cpack program executable.
-CMAKE_CPACK_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe
+// CMAKE_CPACK_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe
 //Path to ctest program executable.
-CMAKE_CTEST_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe
+// CMAKE_CTEST_COMMAND:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -57,9 +57,9 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=D:/projects/leetcode.cpp.project
+CMAKE_HOME_DIRECTORY:INTERNAL=/Users/icowin/Projects/leetcode.cpp.project
 //number of local generators
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20
+// CMAKE_ROOT:INTERNAL=D:/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20
 
