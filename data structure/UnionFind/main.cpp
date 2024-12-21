@@ -10,6 +10,8 @@ int main(){
     // 总体测试过程的算法复杂度是O(n^2)的
     UnionFindTestHelper::testUF1(n);
     UnionFindTestHelper::testUF2(n);
+    UnionFindTestHelper::testUF3(n);
+    UnionFindTestHelper::testUF4(n);
 
     return 0;
 }
