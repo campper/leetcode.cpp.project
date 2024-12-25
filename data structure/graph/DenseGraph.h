@@ -10,9 +10,9 @@ using namespace std;
 //稠密图 - 邻接矩阵
 class DenseGraph {
     private:
-    int n,m;
-    bool directed;
-    vector<vector<bool>> g;
+        int n,m;
+        bool directed;
+        vector<vector<bool>> g;
     public:
     DenseGraph(int n,bool directed){
         this->n = n;
@@ -23,7 +23,8 @@ class DenseGraph {
         }
     }
 
-    ~DenseGraph(){
+    ~DenseGraph()
+    {
 
     }
 
@@ -34,7 +35,7 @@ class DenseGraph {
         assert(v>=0 && v < n);
         assert(w>=0 && w < n);
 
-        if(hasEdge(v,w)){
+        if(hasEdge( v, w )){
             return;
         }
 
