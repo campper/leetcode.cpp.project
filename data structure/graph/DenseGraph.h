@@ -52,6 +52,8 @@ class DenseGraph {
         return g[v][w];
     }
 
+    
+
 };
 
 #endif  //  _GRAPH_DENSEGRAPH_H_
