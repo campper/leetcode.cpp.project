@@ -55,6 +55,12 @@ class SparseGraph
             }
         }
         return false;
+
+    }
+
+    void show()
+    {
+        
     }
 
     class adjIteratoer
@@ -91,6 +97,7 @@ class SparseGraph
         int end(){
             return index>= G.g[v].size();
         }
+        
     };
 };
 
