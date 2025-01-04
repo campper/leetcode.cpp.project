@@ -64,7 +64,7 @@ class DenseGraph {
         }
     }
 
-   class adjIteratoer
+   class adjIterator
     {
         private:
         DenseGraph &G;
@@ -72,7 +72,7 @@ class DenseGraph {
         int index;
 
         public:
-        adjIteratoer(DenseGraph &graph,int v):G(graph)
+        adjIterator(DenseGraph &graph,int v):G(graph)
         {
             this->v = v;
             this->index = -1;

@@ -70,7 +70,7 @@ class SparseGraph
         }
     }
 
-    class adjIteratoer
+    class adjIterator
     {
         private:
         SparseGraph &G;
@@ -78,7 +78,7 @@ class SparseGraph
         int index;
 
         public:
-        adjIteratoer(SparseGraph &graph,int v):G(graph)
+        adjIterator(SparseGraph &graph,int v):G(graph)
         {
             this->v = v;
             this->index = 0;
@@ -102,7 +102,7 @@ class SparseGraph
         }
 
         int end(){
-            return index>= G.g[v].size();
+            return index >= G.g[v].size();
         }
         
     };
