@@ -88,7 +88,7 @@ int main(){
 
     //TestG2.txt
     string filename2 = "testG2.txt";
-    DenseGraph g2 = DenseGraph(7,false);
+    DenseGraph g2 = DenseGraph(6,false);
     ReadGraph<DenseGraph> readGraph2(g2,filename2);
     Component<DenseGraph> component2(g2);
     cout<<"TestG2.txt,Component Count:  "<<component2.count()<<endl;

@@ -14,13 +14,15 @@ class Component{
     private:
     Graph &G;
     bool *visited;
-    int ccount;
+    int ccount; //联通分量
+
     void dfs(int v){
         visited[v] = true;
 
         typename Graph::adjIterator adj(G,v);
         for(int i=adj.begin();!adj.end(); i=adj.next()){
-            if(!visited[i]){
+            if(!visited[i])
+            {
                 dfs(i); //递归
             }
         }
@@ -31,7 +33,7 @@ class Component{
         ccount = 0;
         for(int i=0;i<G.V();i++)
         {
-            visited = false;
+            visited[i] = false;
         }
 
         for(int i=0;i<G.V();i++){
