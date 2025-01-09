@@ -99,14 +99,14 @@ using namespace std;
 
 int main() {
     
-    string filename2  = "testG2.txt";
-    DenseGraph g2 = DenseGraph(6,false);
-    ReadGraph<DenseGraph> readgraph2(g2,filename2);
-    g2.show();
+    string filename  = "testG1.txt";
+    DenseGraph g = DenseGraph(13,false);
+    ReadGraph<DenseGraph> readgraph2(g,filename);
+    g.show();
     cout<<endl;
 
-    Path<DenseGraph> path2(g2,0);
-    cout<<"Path from 0 to 6 : " << endl;
+    Path<DenseGraph> path2(g,0);
+    cout<<"Path from 0 to 12 : " << endl;
     path2.showPath(6);
     cout<<endl;
 

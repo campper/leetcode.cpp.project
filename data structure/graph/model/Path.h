@@ -74,9 +74,10 @@ class Path
 
     void path(int w,vector<int> &vec){
 
-        assert( hasPath(w) );
-        
-        stack<int> s;
+        // assert( hasPath(w) );
+        if(hasPath(w))
+        {
+            stack<int> s;
         // 通过from数组逆向查找到从s到w的路径, 存放到栈中
 
         int p = w;
@@ -90,6 +91,9 @@ class Path
         while(! s.empty()){
             vec.push_back( s.top());
             s.pop();
+        }
+        } else {
+            cout<<"no Path"<<endl;
         }
 
     }
