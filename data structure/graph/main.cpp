@@ -4,6 +4,7 @@
 #include "include/DenseGraph.h"
 #include "include/ReadGraph.h"
 #include "model/Component.h"
+#include "model/Path.h"
 
 using namespace std;
 
@@ -76,22 +77,37 @@ using namespace std;
 //     return 0;
 // }
 
-int main(){
-    //TestG1.txt
-    string filename1 = "testG1.txt";
-    SparseGraph g1 = SparseGraph(13,false);
-    ReadGraph<SparseGraph> readGraph1(g1,filename1);
-    Component<SparseGraph> component1(g1);
-    cout<<"TestG1.txt,Component Count:  "<<component1.count()<<endl;
+// int main(){
+//     //TestG1.txt
+//     string filename1 = "testG1.txt";
+//     SparseGraph g1 = SparseGraph(13,false);
+//     ReadGraph<SparseGraph> readGraph1(g1,filename1);
+//     Component<SparseGraph> component1(g1);
+//     cout<<"TestG1.txt,Component Count:  "<<component1.count()<<endl;
 
+//     cout<<endl;
+
+//     //TestG2.txt
+//     string filename2 = "testG2.txt";
+//     DenseGraph g2 = DenseGraph(6,false);
+//     ReadGraph<DenseGraph> readGraph2(g2,filename2);
+//     Component<DenseGraph> component2(g2);
+//     cout<<"TestG2.txt,Component Count:  "<<component2.count()<<endl;
+    
+//     return 0;
+// }
+
+int main() {
+    
+    string filename2  = "testG2.txt";
+    DenseGraph g2 = DenseGraph(6,false);
+    ReadGraph<DenseGraph> readgraph2(g2,filename2);
+    g2.show();
     cout<<endl;
 
-    //TestG2.txt
-    string filename2 = "testG2.txt";
-    DenseGraph g2 = DenseGraph(6,false);
-    ReadGraph<DenseGraph> readGraph2(g2,filename2);
-    Component<DenseGraph> component2(g2);
-    cout<<"TestG2.txt,Component Count:  "<<component2.count()<<endl;
-    
-    return 0;
+    Path<DenseGraph> path2(g2,0);
+    cout<<"Path from 0 to 6 : " << endl;
+    path2.showPath(6);
+    cout<<endl;
+
 }
