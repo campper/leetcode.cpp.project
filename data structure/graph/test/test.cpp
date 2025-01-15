@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cassert>
 using namespace std;
 
 void calc(int n,int a,int b){
@@ -7,11 +9,27 @@ void calc(int n,int a,int b){
     }
 }
 
+string substring(string t,int s,int e){
+    string result = "";
+    // for(int i=s-1;i<e;i++)
+    // {
+    //     result.push_back((t[i]));
+    // }
+    assert(  e > s );
+    int i=s;
+    while(i<=e){
+        result.push_back(t[i-1]);
+        i++;
+    }
+
+    return result;
+}
+
 int main(){
-    int a = 3;
-    int b = 2;
-    calc(b,a,b);
-    a = a+1;
-    cout << a  <<endl;
+    string identity = "110104200306215328";
+
+    string birth_day = substring(identity,7,14);
+    cout<<birth_day<<endl;
+
     return 0;
 }

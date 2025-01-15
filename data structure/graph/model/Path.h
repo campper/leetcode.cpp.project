@@ -78,20 +78,21 @@ class Path
         if(hasPath(w))
         {
             stack<int> s;
-        // 通过from数组逆向查找到从s到w的路径, 存放到栈中
+            // 通过from数组逆向查找到从s到w的路径, 存放到栈中
 
-        int p = w;
-        while(p != -1){
-            s.push(p);
-            p = from[p];
-        }
+            int p = w;
+            while(p != -1){
+                s.push(p);
+                p = from[p];
+            }
 
-        // 从栈中依次取出元素, 获得顺序的从s到w的路径
-        vec.clear();
-        while(! s.empty()){
-            vec.push_back( s.top());
-            s.pop();
-        }
+            // 从栈中依次取出元素, 获得顺序的从s到w的路径
+            vec.clear();
+            while(! s.empty())
+            {
+                vec.push_back( s.top());
+                s.pop();
+            }
         } else {
             cout<<"no Path"<<endl;
         }
