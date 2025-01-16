@@ -43,17 +43,20 @@ class Path
     public:
     
     // 构造函数, 寻路算法, 寻找图graph从s点到其他点的路径
-    Path(Graph &graph,int s):G(graph){
+    Path(Graph &graph,int s):G(graph)
+    {
         //算法初始化
-        assert( s>=0 && s< G.V() );
+        assert( s >= 0 && s < G.V() );
         
         visited = new bool[G.V()];
         from = new int[G.V()];
 
-        for(int i = 0;i < G.V(); i++){
+        for(int i = 0;i < G.V(); i++)
+        {
             visited[i] = false;
             from[i] = -1;
         }
+        
         this->s = s;
 
         // 寻路算法
