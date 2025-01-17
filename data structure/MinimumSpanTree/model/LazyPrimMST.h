@@ -5,6 +5,15 @@
 #ifndef _LAZYPRIMMST_H_
 #define _LAZYPRIMMST_H_
 
+#include <iostream>
+#include <cassert>
+#include <vector>
+#include "Edge.h"
 
 
+template <typename Edge>
+class LazyPrimMST
+{
+
+};
 #endif // _LAZYPRIMMST_H_
