@@ -14,6 +14,8 @@
 template <typename Edge>
 class LazyPrimMST
 {
-
+    private:
+        int n,m;
+    public:
 };
 #endif // _LAZYPRIMMST_H_
