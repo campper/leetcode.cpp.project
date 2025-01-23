@@ -110,4 +110,6 @@ int main() {
     path2.showPath(6);
     cout<<endl;
 
+    return 0;
+
 }
