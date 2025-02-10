@@ -26,7 +26,10 @@ class PrimMST
             typename Graph::adjIterator adj(G,v);
             for(Edge<Weight>* e = adj.begin(); !adj.end();e = adj.next())
             {
-
+                int w = e->other(v);
+                if( !marked[w] ){
+                    
+                }
             }
         }
  
