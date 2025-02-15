@@ -29,6 +29,9 @@ public:
         
     }
 
+    ~KruskalMST(){}
+    
+
 };
 
 #endif // _KRUSKALMST_H_
