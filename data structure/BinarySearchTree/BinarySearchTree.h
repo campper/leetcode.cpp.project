@@ -57,9 +57,11 @@ public:
 
         _root = insert(_root,key,value);
     }
+    
     bool contain(Key key){
         return contain(this->_root,key);
     }
+
 
     
 
