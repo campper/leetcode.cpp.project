@@ -13,18 +13,13 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) 
     {
-        int n = strs.size();
-        if(n==0) return "";
-        string ans = strs[0];
-        for(int i=1;i<n;i++)
+        if(strs.empty() ) return "";
+        const auto p = minmax_element(strs.begin(),strs.end());
+        for(int i=0; i< p.first->size();++i)
         {
-            int j=0;
-            for(;j<ans.size() && j<strs[i].size();j++)
-            {
-                if(ans[j] != strs[i][j]) break;
-            }
-            ans = ans.substr(0,j);
+            if(p.first->at(i) != p.second->at(i)) return p.first->substr(0,i);
         }
+        return *p.first;
     }
 };
 // @lc code=end
