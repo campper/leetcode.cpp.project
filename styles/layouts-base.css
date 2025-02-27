@@ -1,0 +1,134 @@
+em {
+  font-family: Georgia, 'Times New Roman', Times, serif,'Microsoft YaHei', '微软雅黑', 'SimSun', '宋体';
+  @apply font-normal italic;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.slidev-layout {
+  /* 以下一行是整个幻灯片的边距 */
+  @apply px-10 py-6 text-[1rem] h-full;
+
+  pre,
+  code {
+    @apply select-text;
+  }
+
+  /* code {
+    background: #eff6ff;
+  } */
+
+  h1 {
+    @apply text-[2.5rem] leading-[3.4rem] mb-4 -ml-[0.05em] font-600;
+  }
+
+  h2 {
+    @apply font-serif text-2xl mb-4 font-semibold;
+    /* 做一个全宽度的浅色背景 */
+    @apply -mx-10 -mt-6;
+    @apply pl-5 pt-1 pb-2 bg-blue-100;
+    /* 给上面加个边框 */
+    @apply border-t-6 border-blue-500;
+  }
+
+  h3 {
+    @apply text-xl mb-2;
+    @apply -mx-10 -mt-4;
+    @apply px-6 pt-4 pb-1 border-b-2 border-blue-200;
+  }
+
+  h4 {
+    @apply -mx-10 pl-6 mt-4 text-lg;
+    @apply border-l-6 border-blue-500;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
+  h6 {
+    @apply text-sm pt-1 uppercase tracking-widest font-500 -ml-[0.05em];
+  }
+
+  h6:not(.opacity-100) {
+    @apply opacity-40;
+  }
+
+  p {
+    @apply my-4 leading-6;
+  }
+
+  strong {
+    @apply text-blue-600 font-semibold;
+  }
+
+  ul {
+    list-style: square;
+    @apply my-3;
+  }
+
+  ol {
+    list-style: decimal;
+    @apply my-3;
+  }
+
+  li {
+    @apply ml-2em pl-0.2em leading-1.4em my-2;
+  }
+
+  blockquote {
+    @apply text-sm px-2 py-1 bg-$prism-background text-$prism-foreground border-$slidev-theme-primary border-l rounded;
+  }
+
+  blockquote > * {
+    @apply my-0;
+  }
+
+  table {
+    @apply w-full text-[0.9rem];
+  }
+
+  thead {
+    @apply bg-blue-100 sticky top-0;
+  }
+
+  tr {
+    @apply border-b border-gray-400 border-opacity-20;
+  }
+
+  th, td {
+    @apply text-center font-400 text-[0.8rem];
+    @apply p-[0.2rem];
+  }
+
+  td > b {
+    @apply font-900 text-blue-600;
+  }
+
+  a {
+    @apply border-current border-b border-dashed hover: text-$slidev-theme-primary hover:border-solid;
+  }
+
+  b,
+  strong {
+    @apply font-600;
+  }
+
+  kbd {
+    @apply border border-gray-400 border-b-2 border-opacity-20 rounded;
+    @apply bg-gray-400 bg-opacity-5 py-0.5 px-1 text-xs font-mono;
+  }
+}
+
+.caption {
+  @apply text-center text-xs text-gray-500 -mt-2 mb-4;
+}
