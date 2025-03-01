@@ -8,10 +8,25 @@
 class Solution {
 public:
     int maxArea(vector<int>& height) {
-        for(int i=height.item();i<height.length();i++){
-            int a = i;
-            
+        int max = 0;
+        int left = 0;
+        int right = height.size() - 1;
+        while (left < right) {
+            int area = (right - left) * min(height[left], height[right]);
+            if (area > max) {
+                max = area;
+            }
+            if (height[left] < height[right]) {
+                left++;
+            } else {
+                right--;
+            }
         }
+        return max;
+    }
+
+    int min(int a, int b) {
+        return a < b ? a : b;
     }
 };
 // @lc code=end
