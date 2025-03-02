@@ -3,28 +3,26 @@
  *
  * [66] 加一
  */
+#include <iostream>
+#include <vector>
+using namespace std;
 
 // @lc code=start
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
-        if(digits.size() == 0) return {};
         int n = digits.size();
-        for(int i = n-1; i >= 0; i--)
-        {
-            if(digits[i] != 9)
-            {
-                digits[i]++;
-            } else {
+        int carry = 1;
+        for(int i = n-1;i>=0;--i){
+            digits[i] += carry;
+            if(digits[i] == 10){
                 digits[i] = 0;
-                if(i == 0){
-                    digits.insert(digits.begin(), 1);
-                    break;
-                }
+            } else {
+                return digits;
             }
         }
+        digits.insert(digits.begin(),1);
         return digits;
-        
     }
 };
 // @lc code=end
