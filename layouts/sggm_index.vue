@@ -7,10 +7,11 @@ const getCurrentDate = (): String => {
   return now.getFullYear() + "年" + (now.getMonth() + 1) + "月";
 };
 
+
 const props = defineProps({
-  layout: {
+  background: {
     type: String,
-    default: "../assets/sgcc_bg_01.jpg"
+    default: "/assets/sgcc_title_bg.png"
   },
   headtitle: {
     type: String,
@@ -28,6 +29,7 @@ const props = defineProps({
     type: String,
     default: "张强",
   },
+
 });
 
 const imageSrc = "/assets/SGGM-logo.png";
@@ -37,7 +39,7 @@ const imgHeight = 66;
 const style = handleBackground(
     props.background,
     true,
-    "linear-gradient(90deg,rgba(3,10,22,1) 0%, rgba(59,130,246,0.5) 100%)"
+    // "linear-gradient(90deg,rgba(3,10,22,1) 0%, rgba(59,130,246,0.5) 100%)"
 );
 </script>
 
@@ -49,13 +51,13 @@ const style = handleBackground(
       
         <div class="ml-30 my-auto w-full mb-17 pl-9 border-l-3" >
           <div class="flex items-left space-x-5 h-[5em]">
-            <img src="/assets/SGGM-logo.png" :style="{ width: imgWidth + 'px', height: imgHeight + 'px' }" alt="光明大模型" />
+            <img :src="imageSrc" :style="{ width: imgWidth + 'px', height: imgHeight + 'px' }" alt="光明大模型" />
           </div>
           <h1 class="tracking-wide font-normal" style="font-size: 3rem;">{{ props.headtitle }}</h1>
           <span class="tracking-wide text-2xl font-normal" style="color:#01796a; font-size: 2rem;">{{ props.subtitle }}</span>
         </div>
         <div class="mt-2 mb-4 pb-0 -mb-20">
-        <p class="tracking-wide font-serif text-2xl font-semibold">{{ getCurrentDate() }}</p>
+        <p class="tracking-wide font-serif text-2xl font-semibold" style="position:fixed; bottom: 100px; left: 100px;">{{ getCurrentDate() }}</p>
         </div>
     </div>
 </template>

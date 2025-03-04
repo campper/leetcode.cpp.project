@@ -11,6 +11,8 @@
     "@slidev/cli": "^51.1.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "echart": "^0.1.3",
+    "echarts": "^5.6.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {

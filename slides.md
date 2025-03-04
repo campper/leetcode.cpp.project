@@ -9,40 +9,33 @@ fonts:
   serif: Noto Serif SC
 canvasWidth: 1080
 layout: sggm_index
-background: /assets/sgcc_bg_01.jpg
+background: /assets/sgcc_title_bg.png
 headtitle: 光明电力大模型研发进展及应用介绍
 subtitle: 中国电力科学研究院有限公司
 ---
 
 <style>
 h1 {
-  color: #01796a;
+  color: #FFF;
 }
 </style>
 
 # 光明电力大模型研发进展及应用介绍
 
 ---
-theme: default
-headtitle: 目录
-background: #FFF
+layout: center
+class: directory-page
+fonts:
+  sans: Microsoft YaHei
+  serif: Noto Serif SC
 ---
 
-<style>
-h1 {
-  color: #01796a;
-}
-
-font {
-  size: 30px;
-}
-
-</style>
-
 # 目录
-- 研发情况
-- 应用案例
 
+<ul class="directory-list">
+  <li><a href="/3">研发情况</a></li>
+  <li><a href="/3">应用案例</a></li>
+</ul>
 
 ---
 
@@ -50,7 +43,7 @@ font {
 ### 1.1 光明电力大模型建设
 
 
-<div class="grid grid-cols-1 mt-15">
+<div class="grid grid-cols-1 mt-3">
 
 <TextCard title="通用大模型技术验证">
 
@@ -58,6 +51,20 @@ font {
 - 经过“增量预训练+微调”后，**知识问答检索场景** 明显提升，**生成推理场景** 略微提升。
 - **系统工程：** 模型能力与 **基础参数规模、样本质量、训练策略、人员投入、工程优化** 等方面均相关。
 </TextCard>
+</div>
+<div class="grid grid-cols-4">
+<div class="grid grid-cols-1" style="width: 200px;height:200px;">
+<RadarChart />
+</div>
+<div class="grid grid-cols-1" style="width: 200px;height:200px;">
+<RadarChart />
+</div>
+<div class="grid grid-cols-1" style="width: 200px;height:200px;">
+<RadarChart />
+</div>
+<div class="grid grid-cols-1" style="width: 200px;height:200px;">
+<RadarChart />
+</div>
 </div>
 
 ---
