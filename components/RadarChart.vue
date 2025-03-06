@@ -1,5 +1,5 @@
 <template>
-    <div ref="chart" style="width: 100%; height: 400px;"></div>
+    <div ref="chart" style="width: 100%; height: 230px;"></div>
   </template>
   
   <script setup>
@@ -10,27 +10,30 @@
   
   onMounted(() => {
     const myChart = echarts.init(chart.value)
+    const newdata = [3000, 3000, 3000, 3000, 3000, 3000]
+    // const newdata = [Math.round(Math.random() * 1000)]
     const option = {
       radar: {
         indicator: [
-          { name: 'Sales', max: 6500 },
-          { name: 'Administration', max: 16000 },
-          { name: 'Information Techology', max: 30000 },
-          { name: 'Customer Support', max: 38000 },
-          { name: 'Development', max: 52000 },
-          { name: 'Marketing', max: 25000 }
+          { name: '1', max: 5000 },
+          { name: '2', max: 5000 },
+          { name: '3', max: 5000 },
+          { name: '4', max: 5000 },
+          { name: '5', max: 5000 },
+          { name: '6', max: 5000 }
         ]
       },
       series: [{
         name: 'Budget vs spending',
         type: 'radar',
+        color: ["#01796a", "#f3a333"],
         data: [
           {
-            value: [4200, 3000, 20000, 35000, 50000, 18000],
+            value: newdata,
             name: 'Allocated Budget'
           },
           {
-            value: [5000, 14000, 28000, 26000, 42000, 21000],
+            value: [3300, 3300, 3300, 3300, 3300, 3300],
             name: 'Actual Spending'
           }
         ]

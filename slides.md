@@ -23,6 +23,7 @@ h1 {
 # 光明电力大模型研发进展及应用介绍
 
 ---
+theme: ./theme/sgcc/sgcc-theme-starter/
 layout: center
 class: directory-page
 fonts:
@@ -52,6 +53,7 @@ fonts:
 - **系统工程：** 模型能力与 **基础参数规模、样本质量、训练策略、人员投入、工程优化** 等方面均相关。
 </TextCard>
 </div>
+
 <div class="grid grid-cols-4">
 <div class="grid grid-cols-1" style="width: 200px;height:200px;">
 <RadarChart />
