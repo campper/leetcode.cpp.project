@@ -10,19 +10,7 @@ using namespace std;
 class Solution {
 public:
     string longestPalindrome(string s) {
-        int n = s.size();
-        string str = s;
-
-        if(n < 2) return s;
-        int max_len = 1, start = 0;
-        char a[1000];
-        // std::reverse(s.begin(),s.end());
-        for(int i=0;i<n;i++)
-        {
-            char c = s[i]; 
-        }
-        return "";
-        
+     
     }
 };
 
