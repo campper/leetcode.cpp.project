@@ -1,6 +1,6 @@
 <template>
     <div class="slidev-layout">
-      <div class="h-full">
+      <div class="h-full w-full">
         <slot />
       </div>
     </div>

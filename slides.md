@@ -23,8 +23,8 @@ h1 {
 # 光明电力大模型研发进展及应用介绍
 
 ---
-theme: ./theme/sgcc/sgcc-theme-starter/
-layout: center
+# theme: ./theme/sgcc/sgcc-theme-starter/
+layout: catalogue
 class: directory-page
 fonts:
   sans: Microsoft YaHei
