@@ -27,7 +27,7 @@ export function handleBackground(
                 : `url(${resolveAssetUrl(background)})`
             : undefined,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        backgroundSize: "100% 300px",
         backgroundPosition: "center",
     };
     console.log(style);
@@ -35,4 +35,4 @@ export function handleBackground(
     if(!style.background) delete style.background;
     
     return style;
-}
+ }

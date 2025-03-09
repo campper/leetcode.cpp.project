@@ -7,7 +7,6 @@ const getCurrentDate = (): String => {
   return now.getFullYear() + "年" + (now.getMonth() + 1) + "月";
 };
 
-
 const props = defineProps({
   background: {
     type: String,
@@ -15,11 +14,11 @@ const props = defineProps({
   },
   headtitle: {
     type: String,
-    default: "光明电力大模型",
+    default: "光明电力大模型2",
   },
   subtitle: {
     type: String,
-    default: "中国电力科学研究院有限公司",
+    default: "中国电力科学研究院有限公司2",
   },
   publishTime: {
     type: String,
@@ -45,19 +44,20 @@ const style = handleBackground(
 
 <template>
     <div class="slidev-layout cover" :style="style">
-        <div class="-ml-4 flex flex-row items-center space-x-3 h-[2.8em]">
+        <div class="-ml-7 flex flex-row items-center space-x-3 h-[2.8em]">
             <div><img src="/assets/sgcc_logo.png" class="h-[5em]" /></div>
         </div>
       
-        <div class="ml-30 my-auto w-full mb-17 pl-9 border-l-3" >
-          <div class="flex items-left space-x-5 h-[5em]">
+        <div class="ml-30 my-auto w-full mb-17 pl-0" >
+          <div class="flex items-left space-x-5 h-[5em] ml-85">
             <img :src="imageSrc" :style="{ width: imgWidth + 'px', height: imgHeight + 'px' }" alt="光明大模型" />
           </div>
           <h1 class="tracking-wide font-normal" style="font-size: 3rem;">{{ props.headtitle }}</h1>
-          <span class="tracking-wide text-2xl font-normal" style="color:#01796a; font-size: 2rem;">{{ props.subtitle }}</span>
         </div>
-        <div class="mt-2 mb-4 pb-0 -mb-20">
-        <p class="tracking-wide font-serif text-2xl font-semibold" style="position:fixed; bottom: 100px; left: 100px;">{{ getCurrentDate() }}</p>
+
+        <div class="ml-70 my-auto mb-1.5">
+          <p class="text-1xl font-normal font-semibold" style="color:#007470; font-size: 1.7rem;">{{ props.subtitle }}</p>
+          <p class="ml-27 text-2xl font-normal font-semibold" style="color:#007470; font-size:1.7rem;">{{ getCurrentDate() }}</p>
         </div>
     </div>
 </template>
