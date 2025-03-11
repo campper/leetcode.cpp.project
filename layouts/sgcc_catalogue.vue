@@ -1,60 +1,58 @@
 <script setup lang="ts">
-// import { useSlideContext } from 'slidev'
+
 import { computed } from 'vue';
-import UnoCSS from 'unocss/vite'
-import { defineProps } from 'vue';
+import UnoCSS from 'unocss/vite';
+// import { handleBackground, resolveAssetUrl } from "./sgcc_index_layout";
+
 
 // 获取当前幻灯片的 Frontmatter 数据
 const props = defineProps({
   title: {
     type: String,
-    default: '默认目录',
+    default: "默认目录",
   },
   englishTitle: {
     type: String,
-    default: 'Default Content',
+    default: "Default Content",
   },
   themeColor: {
     type: String,
-    default: '#FFF',
+    default: "#FFF",
   },
   fontColor: {
     type: String,
-    default: '#007470',
+    default: "#007470",
   },
   fontSize: {
     type: String,
-    default: '1.5rem',
+    default: "1.5rem",
   },
 });
 
+console.log(props.title);
 // 获取目录索引形状大小和颜色
 const height = 50;
 const width = 50;
 const color = '#008380';
 const times = 5;
+const size = 20;
 
+// const style = handleBackground(props.title, true, props.englishTitle);
 // 提取参数
 </script>
 
-<style scoped>
-h1 {
-  @apply text-4xl font-serif font-semibold
-}
-
-</style>
-
 <template>
-  <div class="slidev-layout cover">
-    <div style="position:absolute;top:330px;left:100px;width: 37px; height: 133px; background-color: #008380;z-index: 2;"></div>
+  <div class="slidev-layout cover" :style="style">
+    <div style="position:absolute;top:330px;left:100px;width: 56px; height: 153px; background-color: #008380;z-index: 2;"></div>
     <div style="position:absolute;top:133px;left:120px;width:120px; height:270px; background-color: #D9D9D9;z-index: 1;"></div>
-      <div>
-        <h1 :style="{color:fontColor}"> {{ props.title }} </h1>
-        <h1 :style="{color:fontColor}"> {{ props.englishTitle }} </h1>
+      <div style="position: absolute; top: 150px; left: 270px">
+        <!-- <h1 :style="{color:fontColor,fontSize:size}"> {{ props.title }} </h1> -->
+        <h1 class="font-normal" style="font-size: 2rem;"> {{ props.title }} </h1>
+        <h1 class="font-normal" style="font-size: 2rem;"> {{ props.englishTitle }} </h1>
       </div>
       </div>
-    <div class="">
-      <div class="term" style="position: absolute;">
+    <div class="slidev-layout cover">
+      <div class="term"  style="position: absolute; top:200px; left: 400px" >
         <div class="flex ml-100" :style="{height: height + 'px', width: width + 'px', backgroundColor: color}">
           1
         </div>
@@ -62,7 +60,7 @@ h1 {
           研发情况
         </div>
       </div>
-      <div class="term" style="position: absolute;top: 100px;">
+      <div class="term" style="position: absolute;top: 270px; left: 400px">
         <div class="flex ml-100" :style="{height: height + 'px', width: width + 'px', backgroundColor: color}">
           2
         </div>

@@ -18,16 +18,15 @@ subtitle: 中国电力科学研究院有限公司
 
 ---
 theme: default
-layout: sgcc_catalogue
 fonts:
   sans: Microsoft YaHei
   serif: Noto Serif SC
+layout: sgcc_catalogue
 title: 目录
 englishtitle: Content
 ---
 
 # 目录
-<test />
 
 
 ---
@@ -123,6 +122,5 @@ englishtitle: Content
 <div class="grid grid-cols-1 mt-15">
 
 构建了“**高性能计算、高性能网络、高性能存储**”大模型训练环境，自主研发电力大模型训练平台及部分工具，实现了对A100、A800、H100、910B 等异构算力统一纳管及按需分配，有力支撑了**340亿**开源电力行业语义大模型、 **1100亿**闭源电力行业语义大模型、**4亿**电力行业视觉大模型预训练，以及设备、营销等专业应用模型研发。
-
 
 </div>

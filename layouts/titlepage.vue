@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { handleBackground } from './layoutHelper';
+import { handleBackground } from './sgcc_index_layout';
 
 const props = defineProps({
   headTitle: {

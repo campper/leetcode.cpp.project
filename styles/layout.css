@@ -1,5 +1,7 @@
 :root {
   --slidev-theme-primary: #01796a;
+  --slidev-theme-accent: #01796a;
+  --slidev-theme-bg: #f9f9f9;
 }
 
 .slidev-layout.cover,
@@ -18,6 +20,7 @@
   ul + h2,
   table + h2 {
     @apply mt-10;
+    color: var(--slidev-theme-primary);
   }
 }
 
