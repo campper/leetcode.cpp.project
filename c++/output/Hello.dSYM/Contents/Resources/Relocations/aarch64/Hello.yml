@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/icowin/Projects/leetcode.cpp.project/c++/output/Hello'
-relocations:     []
-...
