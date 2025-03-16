@@ -32,7 +32,7 @@ int main()
     QuickSort(list,0,index-1,index);
     
     //打印结果
-    std::cout<<"\n　Final sorting result:\n";
+    std::cout<<"\n Final sorting result:\n";
     for(int i=0;i<index;i++){
         std::cout<<list[i]<<std::endl;
     }
