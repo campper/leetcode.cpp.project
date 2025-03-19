@@ -8,8 +8,9 @@ class SelectionSort{
         SelectionSort(){}
 
         template<typename T>
-        static void swap(T& arr, int i, int j){
-            int t = arr[i];
+        static void swap(T arr[], int i, int j){
+            //std::swap(arr[i],arr[j]); //也可以实现
+            T t = arr[i];
             arr[i] = arr[j];
             arr[j] = t;
         }
@@ -27,6 +28,11 @@ class SelectionSort{
                 }
                 swap(arr,i,minIndex);
             }
+        }
+
+        template<typename T>
+        int compareTo(T arr[], int n){
+            
         }
 
 

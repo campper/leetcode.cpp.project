@@ -6,5 +6,17 @@ public class Main {
             System.out.print(e + " ");
         }
         System.out.println();
+
+        Student[] students = new Student{
+            new Student("Alice",98),
+            new Student("Bobo",100),
+            new Student("Charles",66)};
+
+        SelectionSort.sort(students);
+        for(Student s:students){
+            System.out.print(s + " ");
+        }
+        System.out.println();
+
     }
 }
