@@ -15,7 +15,7 @@ public class SortingHelper {
     public static <E extends Comparable<E>> void sortTest(String sortname,E[] arr){
         long startTime = System.nanoTime();
         if(sortname.equals("SelectionSort"))
-            SelectionSort.sort(arr);
+            SelectionSort.post_sort(arr);
 
         long endTime = System.nanoTime();
 
