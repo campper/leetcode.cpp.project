@@ -20,6 +20,10 @@ public class SortingHelper {
             SelectionSort.post_sort(arr);
         else if(sortname.equals("InsertionSort"))
             InsertionSort.sort(arr);
+        else if(sortname.equals("InsertionSort2"))
+            InsertionSort.sort2(arr);
+        else if(sortname.equals("InsertionSort3"))
+            InsertionSort.sort3(arr);
 
         long endTime = System.nanoTime();
 
