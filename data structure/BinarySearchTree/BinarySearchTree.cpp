@@ -2,9 +2,12 @@
 // Created by alxor on 10/12/2023.
 //
 #include <cstddef>
+#include <vector>
 #include "FileOps.h"
 #include "SequenceST.h"
 #include "BinarySearchTree.h"
+
+using namespace std;
 
 int main()
 {

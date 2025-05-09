@@ -133,7 +133,7 @@ public:
 
     //  删除指定的key
     void remove(Key key){
-        _root = remove(root,key);
+        _root = remove(_root,key);
     }
 private:
     // 向以node为根的二叉搜索树中,插入节点(key，value)
@@ -265,17 +265,17 @@ private:
     }
 
 
-    Node* remove(Node* node,Key key)
-    {
-        //找前序节点的最大值
-        if(node == NULL){
-            return NULL;
-        }
-        
-        if(key < node->_key){
-            
-        }
-    }
+    // Node* remove(Node* node,Key key)
+    // {
+    //     //找前序节点的最大值
+    //     if(node == NULL){
+    //         return NULL;
+    //     }
+    //
+    //     if(key < node->_key){
+    //
+    //     }
+    // }
 
     Node* remove(Node* node, Key key)
     {
