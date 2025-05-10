@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Array<E> {
     private E[] data;
     private int size;
