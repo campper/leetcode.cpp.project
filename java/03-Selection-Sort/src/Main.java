@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class Main {
 
     public static <E extends Comparable<E>> void main(String[] args) {
@@ -39,5 +37,18 @@ public class Main {
             SortingHelper.sortTest("SelectionSort", arr);
         }
 
+    }
+
+    public static class Main {
+        public static void main(String[] args) {
+            ArrayStack<Integer> stack = new ArrayStack<>();
+            for (int i = 0; i < 5; i++) {
+                stack.push(i);
+                System.out.println(stack);
+            }
+
+            stack.pop();
+            System.out.println(stack);
+        }
     }
 }
