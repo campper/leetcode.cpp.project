@@ -3,6 +3,7 @@ public class LoopQueue<E> implements Queue<E> {
     private int front,tail;
     private int size;
 
+    //循环神经网络
     public LoopQueue(int capacity) {
         data = (E[]) new Object[capacity+1];  // 浪费一个单位，这个单位保证队列满和队列空不都是 front == tail
         front = 0;
